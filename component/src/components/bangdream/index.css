@@ -1,0 +1,114 @@
+.kasumi-container {
+  max-width: 28rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.75rem;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+  overflow: hidden;
+}
+
+.kasumi-header {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 0;
+}
+
+.kasumi-username {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0;
+}
+
+.kasumi-level {
+  font-size: 1.25rem;
+  color: #505050;
+  margin-bottom: 0;
+}
+
+.kasumi-introduction-text {
+  color: #505050;
+  margin-bottom: 0;
+}
+
+.kasumi-user-id {
+  color: #505050;
+  margin-bottom: 0;
+}
+
+.kasumi-stats-section {
+  padding: 12px;
+}
+
+.kasumi-section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background-color: #5b5b5b;
+  color: white;
+  padding: 4px 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.kasumi-difficulty-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kasumi-difficulty-item {
+  text-align: center;
+}
+
+.kasumi-difficulty-tag {
+  width: 78px;
+  margin: 0 auto 0.25rem;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.kasumi-difficulty-value {
+  color: #525252;
+}
+
+.kasumi-band-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.kasumi-band-item {
+  text-align: center;
+}
+
+.kasumi-band-avatar {
+  height: 36px;
+}
+
+.kasumi-band-level {
+  color: #525252;
+}
+
+.kasumi-character-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.kasumi-character-item {
+  text-align: center;
+}
+
+.kasumi-character-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.kasumi-character-level {
+  color: #525252;
+}
