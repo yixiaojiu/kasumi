@@ -12,5 +12,5 @@
     "paths": {},
     "skipLibCheck": true
   },
-  "exclude": ["dist"]
+  "exclude": ["dist", "scripts"]
 }

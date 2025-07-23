@@ -5,7 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-// import { Demo } from '../../../component/src/components/demo';
+import { BangDream } from '@yixiaojiu/kasumi';
 
 import styles from './index.module.css';
 
@@ -34,6 +34,7 @@ export default function Home(): ReactNode {
     <Layout title={`Hello from ${siteConfig.title}`} description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
+        <BangDream api="https://api.yixiaojiu.top/api/edge/bangdream/data" />
         <HomepageFeatures />
       </main>
     </Layout>
