@@ -3,9 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import { BangDream } from '@yixiaojiu/kasumi';
 
 import styles from './index.module.css';
 
@@ -19,8 +17,8 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+          <Link className="button button--secondary button--lg" to="/docs/guide/get-started">
+            开始
           </Link>
         </div>
       </div>
@@ -33,10 +31,7 @@ export default function Home(): ReactNode {
   return (
     <Layout title={`Hello from ${siteConfig.title}`} description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <main>
-        <BangDream api="https://api.yixiaojiu.top/api/edge/bangdream/data" />
-        <HomepageFeatures />
-      </main>
+      <main></main>
     </Layout>
   );
 }

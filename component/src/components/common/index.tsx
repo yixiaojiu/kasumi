@@ -12,7 +12,7 @@ export interface ErrorIconProps {
   error: Error;
 }
 
-export const Loading = ({ className, children, isLoading, ...restProps }: LoadingProps) => {
+export const Loading = ({ className, children, isLoading }: LoadingProps) => {
   if (isLoading) {
     return (
       <div className={clsx('kasumi-loading-container', className)}>

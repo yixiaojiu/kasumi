@@ -1,21 +1,21 @@
 .kasumi-container {
   max-width: 28rem;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 0.75rem;
   /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
-  overflow: hidden;
+
+  container-type: inline-size;
+  container-name: kasumi-main;
 }
 
 .kasumi-header {
   text-align: center;
-  padding: 1.5rem;
+  padding: 24px;
   margin-bottom: 0;
 }
 
 .kasumi-username {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: bold;
   color: #1f2937;
   margin-bottom: 0;
 }
@@ -36,14 +36,14 @@
   margin-bottom: 0;
 }
 
-.kasumi-stats-section {
-  padding: 12px;
+.kasumi-section {
+  margin-bottom: 12px;
 }
 
 .kasumi-section-title {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
   background-color: #5b5b5b;
   color: white;
   padding: 4px 16px;
@@ -62,12 +62,19 @@
 
 .kasumi-difficulty-tag {
   width: 78px;
-  margin: 0 auto 0.25rem;
+  margin: 0 auto 4px;
   color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.875rem;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  font-size: 14px;
   text-transform: uppercase;
+
+  @container kasumi-main (width <= 400px) {
+    width: 70px;
+    font-size: 12px;
+  }
 }
 
 .kasumi-difficulty-value {
@@ -77,8 +84,8 @@
 .kasumi-band-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .kasumi-band-item {
@@ -96,8 +103,8 @@
 .kasumi-character-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .kasumi-character-item {
@@ -107,6 +114,11 @@
 .kasumi-character-avatar {
   width: 32px;
   height: 32px;
+
+  @container kasumi-main (width <= 400px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .kasumi-character-level {

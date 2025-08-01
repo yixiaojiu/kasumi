@@ -6,7 +6,8 @@
   "private": "true",
   "scripts": {
     "dev": "pnpm -C site run dev",
-    "build": "pnpm -C component run build"
+    "build": "pnpm -C component run build",
+    "build:site": "pnpm -C site run build"
   },
   "keywords": [],
   "author": "",

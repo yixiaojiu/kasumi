@@ -7,9 +7,11 @@ import { difficultyList, musicClearInfoList, difficultyColorList } from './const
 
 interface BangDreamProps {
   api: string;
+  LoadingComponet?: typeof Loading;
+  ErrorComponent?: typeof ShowError;
 }
 
-const BangDream: React.FC<BangDreamProps> = ({ api }) => {
+const BangDream: React.FC<BangDreamProps> = ({ api, LoadingComponet = Loading, ErrorComponent = ShowError }) => {
   const { data, error, isLoading } = useSWR<BangDreamData>('bangdream', async () => {
     const response = await fetch(api);
     if (!response.ok) {
@@ -20,11 +22,11 @@ const BangDream: React.FC<BangDreamProps> = ({ api }) => {
   });
 
   if (error) {
-    return <ShowError error={error} />;
+    return <ErrorComponent error={error} />;
   }
 
   return (
-    <Loading isLoading={isLoading}>
+    <LoadingComponet isLoading={isLoading}>
       <div className="kasumi-container">
         <div className="kasumi-header">
           <h2 className="kasumi-username">{data?.profile?.userName}</h2>
@@ -33,8 +35,9 @@ const BangDream: React.FC<BangDreamProps> = ({ api }) => {
           <p className="kasumi-user-id">{data?.profile?.userId}</p>
         </div>
 
+        {/* 乐曲完成情况 */}
         {musicClearInfoList.map(musicClearInfo => (
-          <div className="kasumi-stats-section">
+          <div className="kasumi-section">
             <h2 className="kasumi-section-title">{musicClearInfo.title}</h2>
             <div className="kasumi-difficulty-grid">
               {difficultyList.map((difficulty, index) => (
@@ -52,7 +55,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api }) => {
         ))}
 
         {/* 乐队等级 */}
-        <div className="kasumi-stats-section">
+        <div className="kasumi-section">
           <h2 className="kasumi-section-title">乐队等级</h2>
           <div className="kasumi-band-grid">
             {data?.bandRankList?.map(bandRank => (
@@ -65,7 +68,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api }) => {
         </div>
 
         {/* 角色等级 */}
-        <div className="kasumi-stats-section">
+        <div className="kasumi-section">
           <h2 className="kasumi-section-title">角色等级</h2>
           <div className="kasumi-character-grid">
             {data?.userCharacterRank.map(character => (
@@ -77,7 +80,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api }) => {
           </div>
         </div>
       </div>
-    </Loading>
+    </LoadingComponet>
   );
 };
 

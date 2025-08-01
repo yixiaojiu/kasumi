@@ -1,7 +1,33 @@
 # Bangdream 组件
 
-// import BangDream from '../../../component/src/components/bangdream';
+## 说明
 
+数据来源：[Bestdori 玩家查询](https://bestdori.com/tool/playersearch)
+
+样式参考：[Yamamoto-2/tsugu-bangdream-bot](https://github.com/Yamamoto-2/tsugu-bangdream-bot)
+
+依赖接口：`/api/edge/bangdream/data`
+
+## Props
+
+| 名称             | 类型       | required | 默认值 | 说明             |
+| ---------------- | ---------- | -------- | ------ | ---------------- |
+| api              | string     | true     | -      | 数据接口         |
+| LoadingComponent | React 组件 | false    | -      | Loading 状态组件 |
+| ErrorComponent   | React 组件 | false    | -      | Error 状态组件   |
+
+## 使用
+
+```ts
 import { BangDream } from '@yixiaojiu/kasumi';
+
+const App = () => {
+  return <BangDream api="https://api.yixiaojiu.top/api/edge/bangdream/data" />;
+};
+```
+
+## 示例
+
+import BangDream from '../../../component/src/components/bangdream';
 
 <BangDream api="https://api.yixiaojiu.top/api/edge/bangdream/data" />
