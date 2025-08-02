@@ -74,7 +74,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api, LoadingComponet = Loading, E
             {data?.userCharacterRank.map(character => (
               <div key={character.img} className="kasumi-character-item">
                 <img loading="lazy" className="kasumi-character-avatar" src={character.img} />
-                <span className="kasumi-character-level">{character.rank}</span>
+                <div className="kasumi-character-level">{character.rank}</div>
               </div>
             ))}
           </div>
