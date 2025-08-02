@@ -1,20 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "outDir": "./dist/cjs",
-    "rootDir": "./src",
-    "strict": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "declarationMap": false,
-    "emitDeclarationOnly": false,
-    "moduleResolution": "Node",
-    "jsx": "react-jsx",
-    "lib": ["DOM", "ESNext"]
-  },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"outDir": "./dist/cjs",
+		"rootDir": "./src",
+		"strict": false,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"declaration": true,
+		"declarationMap": false,
+		"emitDeclarationOnly": false,
+		"moduleResolution": "Node",
+		"jsx": "react-jsx",
+		"lib": ["DOM", "ESNext"]
+	},
+	"include": ["src"],
+	"exclude": ["node_modules"]
 }

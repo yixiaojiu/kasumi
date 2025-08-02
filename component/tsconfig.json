@@ -1,16 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "target": "ES2022",
-    "lib": ["ES2022", "DOM"],
-    "moduleResolution": "bundler",
-    "module": "esnext",
-    "baseUrl": ".",
-    "paths": {},
-    "skipLibCheck": true
-  },
-  "exclude": ["dist", "scripts"]
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"allowJs": true,
+		"esModuleInterop": true,
+		"jsx": "preserve",
+		"target": "ES2022",
+		"lib": ["ES2022", "DOM"],
+		"moduleResolution": "bundler",
+		"module": "esnext",
+		"baseUrl": ".",
+		"paths": {},
+		"skipLibCheck": true
+	},
+	"exclude": ["dist", "scripts"]
 }

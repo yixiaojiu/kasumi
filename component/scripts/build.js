@@ -1,7 +1,7 @@
-const { exec } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const util = require('util');
+const { exec } = require('node:child_process');
+const fs = require('node:fs');
+const path = require('node:path');
+const util = require('node:util');
 
 // 将exec转换为Promise版本以便使用async/await
 const execAsync = util.promisify(exec);
@@ -43,7 +43,9 @@ async function copyCssFiles(srcDir, destDir) {
 
   async function copyRecursive(currentDir) {
     // 读取当前目录下的所有文件和子目录
-    const entries = await fs.promises.readdir(currentDir, { withFileTypes: true });
+    const entries = await fs.promises.readdir(currentDir, {
+      withFileTypes: true,
+    });
 
     for (const entry of entries) {
       const srcPath = path.join(currentDir, entry.name);

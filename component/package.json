@@ -1,50 +1,50 @@
 {
-  "name": "@yixiaojiu/kasumi",
-  "version": "0.0.2",
-  "description": "",
-  "main": "./dist/cjs/index.js",
-  "types": "./dist/esm/index.d.ts",
-  "module": "./dist/esm/index.js",
-  "scripts": {
-    "build": "node ./scripts/build.js"
-  },
-  "keywords": [],
-  "files": [
-    "dist",
-    "package.json",
-    "README.md",
-    "LICENSE"
-  ],
-  "author": "",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    },
-    "./components/*": {
-      "import": "./dist/esm/components/*",
-      "require": "./dist/cjs/components/*"
-    }
-  },
-  "packageManager": "pnpm@10.8.1",
-  "devDependencies": {
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "^5.8.3"
-  },
-  "peerDependencies": {
-    "react": ">=17",
-    "react-dom": ">=17"
-  },
-  "dependencies": {
-    "swr": "2.3.4",
-    "clsx": "2.0.0"
-  }
+	"name": "@yixiaojiu/kasumi",
+	"version": "0.0.2",
+	"description": "",
+	"main": "./dist/cjs/index.js",
+	"types": "./dist/esm/index.d.ts",
+	"module": "./dist/esm/index.js",
+	"scripts": {
+		"build": "node ./scripts/build.js"
+	},
+	"keywords": [],
+	"files": [
+		"dist",
+		"package.json",
+		"README.md",
+		"LICENSE"
+	],
+	"author": "",
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js"
+		},
+		"./components/*": {
+			"import": "./dist/esm/components/*",
+			"require": "./dist/cjs/components/*"
+		}
+	},
+	"packageManager": "pnpm@10.8.1",
+	"devDependencies": {
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"typescript": "^5.8.3"
+	},
+	"peerDependencies": {
+		"react": ">=17",
+		"react-dom": ">=17"
+	},
+	"dependencies": {
+		"swr": "2.3.4",
+		"clsx": "2.0.0"
+	}
 }

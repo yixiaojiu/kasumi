@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "pnpm -C site run dev",
     "build": "pnpm -C component run build",
-    "build:site": "pnpm -C site run build"
+    "build:site": "pnpm -C site run build",
+    "format": "biome format --write",
+    "lint": "biome lint"
   },
   "keywords": [],
   "author": "",

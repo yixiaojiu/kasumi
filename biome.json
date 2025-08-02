@@ -14,6 +14,14 @@
   },
   "linter": {
     "enabled": true,
+    "includes": [
+      "component/src/**",
+      "component/scripts/**",
+      "site/src/**",
+      "site/docs/**",
+      "site/docusaurus.config.ts",
+      "site/sidebars.ts"
+    ],
     "rules": {
       "recommended": true,
       "correctness": {
@@ -21,7 +29,11 @@
         "noUnreachable": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noDuplicateProperties": "warn"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     }
   },

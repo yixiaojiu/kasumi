@@ -1,9 +1,9 @@
-import React from 'react';
+import type { FC } from 'react';
 import useSWR from 'swr';
 import './index.css';
-import { BangDreamData } from './types';
 import { Loading, ShowError } from '../common';
-import { difficultyList, musicClearInfoList, difficultyColorList } from './constants';
+import { difficultyColorList, difficultyList, musicClearInfoList } from './constants';
+import type { BangDreamData } from './types';
 
 interface BangDreamProps {
   api: string;
@@ -11,7 +11,7 @@ interface BangDreamProps {
   ErrorComponent?: typeof ShowError;
 }
 
-const BangDream: React.FC<BangDreamProps> = ({ api, LoadingComponet = Loading, ErrorComponent = ShowError }) => {
+const BangDream: FC<BangDreamProps> = ({ api, LoadingComponet = Loading, ErrorComponent = ShowError }) => {
   const { data, error, isLoading } = useSWR<BangDreamData>('bangdream', async () => {
     const response = await fetch(api);
     if (!response.ok) {
@@ -37,7 +37,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api, LoadingComponet = Loading, E
 
         {/* 乐曲完成情况 */}
         {musicClearInfoList.map(musicClearInfo => (
-          <div className="kasumi-section">
+          <div key={musicClearInfo.key} className="kasumi-section">
             <h2 className="kasumi-section-title">{musicClearInfo.title}</h2>
             <div className="kasumi-difficulty-grid">
               {difficultyList.map((difficulty, index) => (
@@ -60,7 +60,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api, LoadingComponet = Loading, E
           <div className="kasumi-band-grid">
             {data?.bandRankList?.map(bandRank => (
               <div key={bandRank.img} className="kasumi-band-item">
-                <img loading="lazy" className="kasumi-band-avatar" src={bandRank.img} />
+                <img alt="band avatar" loading="lazy" className="kasumi-band-avatar" src={bandRank.img} />
                 <div className="kasumi-band-level">{bandRank.rank}</div>
               </div>
             ))}
@@ -73,7 +73,7 @@ const BangDream: React.FC<BangDreamProps> = ({ api, LoadingComponet = Loading, E
           <div className="kasumi-character-grid">
             {data?.userCharacterRank.map(character => (
               <div key={character.img} className="kasumi-character-item">
-                <img loading="lazy" className="kasumi-character-avatar" src={character.img} />
+                <img alt="character avatar" loading="lazy" className="kasumi-character-avatar" src={character.img} />
                 <div className="kasumi-character-level">{character.rank}</div>
               </div>
             ))}
