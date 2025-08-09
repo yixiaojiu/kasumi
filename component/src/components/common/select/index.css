@@ -1,0 +1,105 @@
+.kasumi-select {
+  position: relative;
+  width: max-content;
+}
+
+.kasumi-select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 160px;
+  padding: 6px 32px 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+  cursor: pointer;
+  position: relative;
+}
+
+.kasumi-select-trigger:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.kasumi-select-trigger::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #6b7280;
+  transform: translateY(-30%);
+  pointer-events: none;
+}
+
+.kasumi-select-trigger.is-disabled {
+  background: #f8fafc;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.kasumi-select-value.is-placeholder {
+  color: #64748b;
+}
+
+.kasumi-select-popover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 50;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.kasumi-select-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.kasumi-select-option {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #0f172a;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.kasumi-select-option.is-active {
+  background: #f1f5f9;
+}
+
+.kasumi-select-option.is-selected {
+  font-weight: 600;
+}
+
+.kasumi-select-check {
+  color: #64748b;
+  margin-left: 8px;
+}
+
+.kasumi-select-option:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}

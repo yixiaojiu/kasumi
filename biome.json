@@ -30,10 +30,12 @@
       },
       "suspicious": {
         "noExplicitAny": "off",
-        "noDuplicateProperties": "warn"
+        "noDuplicateProperties": "warn",
+        "noArrayIndexKey": "warn"
       },
       "a11y": {
-        "noSvgWithoutTitle": "off"
+        "noSvgWithoutTitle": "off",
+        "useAltText": "off"
       }
     }
   },
