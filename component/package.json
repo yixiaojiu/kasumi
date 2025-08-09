@@ -1,12 +1,13 @@
 {
   "name": "@yixiaojiu/kasumi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.d.ts",
   "module": "./dist/esm/index.js",
   "scripts": {
-    "build": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js",
+    "publish": "npm publish --access public"
   },
   "keywords": [],
   "files": [

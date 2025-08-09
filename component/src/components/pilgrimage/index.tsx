@@ -33,16 +33,13 @@ const Pilgrimage: FC<PilgrimageProps> = ({ animes, className }) => {
       ) : null}
       <section className="kasumi-pilgrimage-cards">
         {currentItems?.map(item => (
-          <article
-            key={`${item.realImageUrl}-${item.animeImageUrl}-${item.shootDate ?? ''}-${item.location ?? ''}`}
-            className="kasumi-pilgrimage-card"
-          >
+          <article key={item.realImageUrl} className="kasumi-pilgrimage-card">
             <div className="kasumi-pilgrimage-images">
               <figure className="kasumi-pilgrimage-frame">
-                <img loading="lazy" src={item.realImageUrl} />
+                <img loading="lazy" referrerPolicy="no-referrer" src={item.realImageUrl} />
               </figure>
               <figure className="kasumi-pilgrimage-frame">
-                <img loading="lazy" src={item.animeImageUrl} />
+                <img loading="lazy" referrerPolicy="no-referrer" src={item.animeImageUrl} />
               </figure>
             </div>
             <div className="kasumi-pilgrimage-content">

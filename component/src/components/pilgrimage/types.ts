@@ -1,9 +1,11 @@
+import { ReactNode } from 'react';
+
 export interface PilgrimageItem {
   realImageUrl: string;
   animeImageUrl: string;
-  description?: string;
-  shootDate?: string;
-  location?: string;
+  description?: ReactNode;
+  shootDate?: ReactNode;
+  location?: ReactNode;
 }
 
 // 每个动画维度下的数据分组

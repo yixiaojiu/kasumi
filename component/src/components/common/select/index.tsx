@@ -90,8 +90,6 @@ export default function Select({ options, value, onChange, placeholder = '请选
       <button
         type="button"
         className={clsx('kasumi-select-trigger', disabled && 'is-disabled')}
-        aria-haspopup="listbox"
-        aria-expanded={isOpen}
         onClick={toggle}
         onKeyDown={onTriggerKeyDown}
         disabled={disabled}
